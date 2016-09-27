@@ -48,6 +48,7 @@ SOFTWARE.
 */
 int main(void)
 {
+
 	RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOA, ENABLE);
 /////////////////////LEDKA//////////////////////
 	 GPIOA->MODER &= (uint32_t) 0b00<<10;
@@ -55,9 +56,9 @@ int main(void)
 	 GPIOA->PUPDR |= (uint32_t) 0b01<<10;
 	 GPIOA->OSPEEDR |= (uint32_t) 0b11<<10;
 //////////////////////TLACIDLO//////////////////////////////
-	 GPIOC->MODER |= (uint32_t) 0b01<<10;
-	 GPIOC->OTYPER &= (uint32_t) 0<<5;
-	 GPIOC->PUPDR &= (uint32_t) 0b00<<10;
+	 GPIOC->MODER |= (uint32_t) 0b01<<26;
+	 GPIOC->OTYPER &= (uint32_t) 0<<13;
+	 GPIOC->PUPDR &= (uint32_t) 0b00<<26;
 
 
 
